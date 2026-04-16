@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 # Install db-service as a package first (available as a sibling directory via Docker context)
-COPY ../db-service /db-service
+COPY db-service /db-service
 RUN pip install --no-cache-dir /db-service
 
 COPY pyproject.toml .
